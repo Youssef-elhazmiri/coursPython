@@ -1,4 +1,4 @@
-"""
+
 #Variabes
 
 nom = "Youssef"
@@ -178,9 +178,163 @@ print(color[0])
 #-----------------------Fonctions-------------------------
 
 #la fonction:
-def salma(name, poste , age):
+def salma():
+    name = input("donner votre nom: ")
+    poste = input("donner votre poste: ")
+    age = input("donner votre age: ")
     print("bonjour "+name+", vous etes un "+poste+", vous avez "+str(age)+" ans.")
 
 #tester
-salma("Youssef" , "Developpeur de web" , 20)
-"""
+salma()
+
+
+#return:
+
+def cub(num):
+    print(num*num*num)
+
+cub(2)
+
+#la meme chose quand on utilise return:
+
+def cube(num):
+    return num*num*num
+
+print(cube(2))
+
+#-----------if Statements---------------
+
+homme = True
+muslim = False
+
+if homme and muslim:
+    print("vous etes un homme et muslim")
+elif homme and not muslim:
+    print("vous etes un homme mais vous n'etes pas muslim")
+elif not homme  and muslim:
+    print ("vous etes une femme muslime")
+else:
+    print("vous etes une femme non muslime")
+
+#comparaison:
+
+#fonction max():
+def max( num1 , num2 , num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+print(max(4 , 945 , 5))
+
+#fonction min():
+
+def min( num1 , num2 , num3):
+    if num1 <= num2 and num1 <= num3:
+        return num1
+    elif num2 <= num1 and num2 <= num3:
+        return num2
+    else:
+        return num3
+
+print(min(456 , 1 , 6 ))
+
+
+#exercice de faire une simple calculatrice:
+
+num1 = float(input("Donner le premier nombre: "))
+op = input("Donner l'operation: ")
+num2 = float(input("Donner le deuxieme nombre: "))
+
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "*":
+    print(num1 * num2)
+elif op == "/":
+    print(num1 / num2)
+else:
+    print("Svp donner une operation")
+
+
+
+
+#---------------------Dectionnaire--------------------
+
+week = {
+    1:"lundi",
+    2:"Mardi",
+    3:"Mercredi",
+    4:"Jeudi",
+    5:"Vendredi",
+    6:"Samedi",
+    7:"Dimanche",
+}
+
+print(week[3])
+print(week.get(3,"try again"))
+
+
+#-------while--------:
+
+i = 0
+while i <= 20:
+    print(i)
+    i = i + 1   #ou bien i += 1
+    if i > 20 :
+        print("Terminer")
+
+
+
+#------for------------:
+
+for letter in "Youssef El Hazmiri":
+    print(letter)
+
+cars2 = ["honda" , "mercides", "audi" , "bmw"]
+
+for car in cars2:
+    print(car)
+
+for num in range(5):
+    print(num)
+
+for num in range(5,11):
+    print(num)
+
+print("\n")
+
+for num in range(len(cars2)):
+    print(num)
+
+for num in range(len(cars2)):
+    print(cars2[num])
+
+
+
+
+#exercice : LOG IN BANQUE
+password = "2420"
+mots = ""
+count = 0
+limit = 3
+out = False
+
+while mots != password and not out:
+    if count < limit :
+        mots = input("Le mots de passe: ")
+        count = count + 1
+    else:
+        out = True
+
+if out:
+    print("vous avez echoué dans les 3 fois, votre carte banquaire est blocké")
+else:
+    print("Vous êtes connecté, Bonjour Youssef")
+
+
+
+
